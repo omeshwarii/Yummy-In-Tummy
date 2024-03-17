@@ -21,8 +21,8 @@ function Home(){
                 <footer className='location'>
                 <section>ADDRESS:</section>
                 <p>1-9-38, Brindavan colony, Saroor nagar, Telangana, Hyderabad, IN - 56093</p>
-                <p>Now available online on <a href="https://www.doordash.com/" target="_blank" title="This will direct you to order online for Doordash chef's miracle special spices ">
-                Doordash</a>&nbsp;and <a href="https://www.ubereats.com/" target="_blank" title="This will direct you to order online for ubereats chef's miracle special spices ">
+                <p>Now available online on <a href="https://www.doordash.com/" title="This will direct you to order online for Doordash chef's miracle special spices ">
+                Doordash</a>&nbsp;and <a href="https://www.ubereats.com/" title="This will direct you to order online for ubereats chef's miracle special spices ">
                 UberEats
                 </a></p>
                 

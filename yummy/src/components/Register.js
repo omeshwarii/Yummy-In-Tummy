@@ -55,7 +55,7 @@ function Register(){
       } else {
     return (
         <div className='LoginSection'>
-            <div  className={emessage==""?"hide":"EMessage"}><p>{emessage}</p></div>
+            <div  className={emessage===""?"hide":"EMessage"}><p>{emessage}</p></div>
           <h3>Create an Account</h3>
           <section> 
            

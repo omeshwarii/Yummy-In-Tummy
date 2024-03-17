@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Switch, Link } from 'react-router-dom';function MenuCard(props) {
+
+function MenuCard(props) {
     return (
         <div className='MenuCard'>
             

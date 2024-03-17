@@ -1,5 +1,5 @@
 import './Login.css'
-import { BrowserRouter as Router, Routes, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 import axios from 'axios';
 import { Navigate } from 'react-router-dom';
 import React, { useEffect,useState } from 'react';

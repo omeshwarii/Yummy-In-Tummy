@@ -34,7 +34,7 @@ function Login(){
   } else {
     return (
       <div className='LoginSection'>
-        <div  className={emessage==""?"hide":"EMessage"}><p>{emessage}</p></div>
+        <div  className={emessage===""?"hide":"EMessage"}><p>{emessage}</p></div>
         <h3>SIGN IN</h3>
         <section> 
             <label htmlFor="Username"></label><br></br>

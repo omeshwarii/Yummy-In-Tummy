@@ -1,4 +1,3 @@
-
 function MenuCard(props) {
     return (
         <div className='MenuCard'>

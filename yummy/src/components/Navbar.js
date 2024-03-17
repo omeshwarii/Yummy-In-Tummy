@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./Navbar.css"
 
 function Navbar(){

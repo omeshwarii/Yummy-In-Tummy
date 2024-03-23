@@ -7,7 +7,7 @@ const userRoutes = require('./api/routes/user');
 
 mongoose.connect(
   "mongodb+srv://admin:"+ process.env.MONGO_ATLAS_PW+"@cluster0.9pinkqj.mongodb.net/?retryWrites=true&w=majority",
-  { useNewUrlParser: true }
+  { useNewUrlParser: true, useUnifiedTopology: true }
 );
 mongoose.Promise = global.Promise;
 

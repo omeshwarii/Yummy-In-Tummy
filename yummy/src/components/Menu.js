@@ -8,7 +8,7 @@ function Menu() {
     const [selectedType, setSelectedType] = useState(''); // State to keep track of selected meal type
 
     useEffect(() => {
-        axios.get('https://yummy-in-tummy.onrender.com/')
+        axios.get('https://yummy-in-tummy.onrender.com/user/menu')
             .then(response => {
                 setMenu(response.data.menu);
             })

@@ -74,7 +74,7 @@ function Register(){
                 </select><br></br>
               <label htmlFor="Password">Password:</label><br></br>
                 <input type="password" id="password" name="Password" placeholder="Password" /><br></br>
-                <label htmlFor="Confirm Password">Confrim Password:</label><br></br>
+                <label htmlFor="Confirm Password">Confirm Password:</label><br></br>
                 <input type="password" id="confirmpassword" name="ConfirmPassword" placeholder="Re-Type Password" /><br></br>
               <button onClick={Signup}>Register</button><br></br>
             

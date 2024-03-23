@@ -1,60 +1,73 @@
-.menu{
+.menu {
     width: 100%;
     text-align: center;
-    margin: 70px 30px 30px 70px;
+    margin: 140px auto 30px auto; /* Adjust top and bottom margin, set left and right margin to auto */
+  }
+  
+  .mealType {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
     
-}
-
-.MenuCards{
-    position: absolute;
-    float: left;
-    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  }
+  
+  .regular,
+  .dessert {
+    background-color: #e6ffe6;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    padding: 1rem;
+    cursor: pointer;
+    
+  }
+  .regular{
+    border-right: solid gainsboro 2px ;
+    border-radius: 5px 0px 0px 5px;
+  }
+  
+  .regular:hover,
+  .dessert:hover {
+    background-color: rgba(8, 73, 8, 0.76);
+    color: white;
+  }
+  
+  
+  .MenuCards {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap;
     justify-content: center; /* Center cards horizontally */
-    margin-top: 100px;
-    margin-bottom : 100px;
+    margin-top: 50px;
     z-index: 1;
-    
-    
-}
-
-.MenuCard{
+  }
+  
+  .MenuCard {
     width: 400px;
-    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.2);
-    border: 10px;
-    float: left;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2);
     margin: 15px;
     height: 400px;
-}
-
-.MenuCard:hover {
+    position: relative;
+  }
+  
+  .MenuCard:hover {
     transform: scale(1.02); /* Scale the menu card to 105% on hover */
-    background-color:rgba(199, 199, 147, 0.831) /* Change the background color on hover */
-}
+    background-color: rgba(199, 199, 147, 0.831); /* Change the background color on hover */
+  }
+  
+  .MenuImg {
+    max-width: 100%; /* Ensure images don't exceed card width */
+    height: auto; /* Allow images to maintain aspect ratio */
+    overflow: hidden; /* Hide any overflow outside the card */
+  }
+  
+  .MenuImg img {
+    width: 100%; /* Make image width 100% of its container */
+    height: auto; /* Allow images to maintain aspect ratio */
+    max-height: 30vh ;
+    object-fit: cover;
+  }
 
-
-.MenuImg{
-    position: relative;
-    top: 0px;
-    
-}
-.MenuDetails{
-    margin-bottom: 20px;
-}
-
-.MenuImg {
-    position: relative;
-    max-width: 100%;
-    max-height: 65%;
-    overflow: hidden;
-}
-
-.MenuImg img {
-    width: 100%;
-    height: auto;
-}
-
-
-.Calories {
+  
+  .Calories {
     position: absolute;
     top: 10px;
     right: 0px;
@@ -63,4 +76,19 @@
     padding: 5px 10px;
     border-radius: 5px 0px 0px 5px;
     font-size: 14px;
-}
+  }
+  
+
+  @media screen and (max-width:1500px ) {
+    .MenuImg Img{
+        height: 20vh;
+    }
+    
+  }
+
+  @media screen and (min-width:1600px ) {
+    .MenuImg Img{
+        height: 20vh;
+    }
+    
+  }

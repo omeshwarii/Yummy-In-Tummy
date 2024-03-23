@@ -1,59 +1,30 @@
-import React, { useEffect, useState } from 'react';
-// import { BrowserRouter as Router, Link, Navigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import "./Navbar.css"
+import './Navbar.css';
 
-function Navbar(){
+function Navbar() {
+  const [showMenu, setShowMenu] = useState(false);
 
-  function logout(){
-    localStorage.removeItem('Authtoken');
-    setIsAuthenticated(false);
-  }
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  useEffect(() => {
-    const token = localStorage.getItem('Authtoken');
-    if (token) {
-      setIsAuthenticated(true);
-    }
-  }, []);
-    const [page, setPage] = useState('Home');
-    function handleMenu(menupage){
-        setPage(menupage);
-    }
-    if (isAuthenticated) {
-      return (
-        
-        <div>
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
+  return (
+    <div className="navbar-container">
       <h1><Link to="/">Yummy in Tummy</Link></h1>
-      <nav>
-        <ul>
-          <li ><Link onClick={handleMenu.bind(this,'Home')} className={page === 'Home' ? 'activePage' : ''} to="/">Home</Link></li>
-          <li><Link onClick={handleMenu.bind(this,'Menu')} className={page === 'Menu' ? 'activePage' : ''} to="/menu">Menu</Link></li>
-          <li><Link onClick={logout} className={page === 'Login' ? 'activePage' : ''} >Logout</Link></li>
-          
+      <nav className={showMenu ? 'nav-active' : ''}>
+        <ul className={showMenu ? 'nav-menu active' : 'nav-menu'}>
+          <li><Link to="/" onClick={toggleMenu}>About</Link></li>
+          <li><Link to="/menu" onClick={toggleMenu}>Menu</Link></li>
         </ul>
-      </nav>
-      
-    </div>
-    
-  );
-    } else {
-    return (
-        
-        <div className="navbar-container">
-          <h1><Link to="/">Yummy in Tummy</Link></h1> 
-          <nav>
-            <ul>
-                <li><Link onClick={handleMenu.bind(this,'Home')} className={page === 'Home' ? 'activePage' : ''} to="/">About</Link></li>
-                <li><Link onClick={handleMenu.bind(this,'Menu')} className={page === 'Menu' ? 'activePage' : ''} to="/menu">Menu</Link></li>
-                <li><Link onClick={handleMenu.bind(this,'Login')} className={page === 'Login' ? 'activePage' : ''} to="/login">Login</Link></li>
-                <li><Link onClick={handleMenu.bind(this,'Register')} className={page === 'Register' ? 'activePage' : ''} to="/register">Register</Link></li>
-            </ul>
-          </nav>
+        <div className="burger-menu" onClick={toggleMenu}>
+          <div className={showMenu ? 'line line1 active' : 'line line1'}></div>
+          <div className={showMenu ? 'line line2 active' : 'line line2'}></div>
+          <div className={showMenu ? 'line line3 active' : 'line line3'}></div>
         </div>
-        
-      );
-    }
+      </nav>
+    </div>
+  );
 }
 
 export default Navbar;

@@ -1,70 +1,108 @@
 body {
-    background-color: beige;
-  }
-  
- 
-  .EMessage{
-    text-align: center;
-    position: relative;
-  }
-  .EMessage p{
-    position: relative;
-    left:calc(50% - 150px);
-    height: 30px;
-    width: 300px;
-    color: white;
-    background-color: red;
-  }
+  background-color: white;
+}
+
+.navbar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+
+.navbar-container h1 a {
+  text-decoration: none;
+  margin-left: 45px;
+  color: inherit;
+  color: black;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: garamond;
+}
+
+.navbar-container nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-container nav ul li {
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+.navbar-container nav ul li:last-child {
+  margin-right: 30px;
+}
+
+.navbar-container nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-container nav ul li a.activePage {
+  font-weight: bold;
+}
+
+/* Media Query for Responsive Navbar */
+@media screen and (max-width: 500px) {
   .navbar-container {
-    position: fixed; /* Fix the navbar container */
-    top: 0; /* Align the navbar to the top of the viewport */
-    width: 100%; /* Make the navbar container take the full width of the viewport */
-    background-color: beige; /* Set a background color for the navbar */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 10px;
-    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.05);
-    z-index: 2;
+    padding: 10px 15px; /* Adjust padding for smaller screens */
   }
-  
-  .navbar-container h1 a{
-    text-decoration: none;
-    margin-left: 45px;
-    color: inherit;
-    color: black;
-    font-size: 40px;
-    font-weight: bold;
-    font-family: garamond;
-     /* Inherit the color from the parent element */
-     /* Remove underline */
-    
+
+  .navbar-container h1 a {
+    margin-left: 15px; /* Adjust margin for smaller screens */
+    font-size: 25px; /* Adjust font size for smaller screens */
   }
-  
+
   .navbar-container nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    display: none; /* Hide the navigation links by default */
   }
-  
-  .navbar-container nav ul li {
-    margin-right: 30px;
-    font-size: 20px;
+
+  .navbar-container nav ul.active {
+    display: flex; /* Display the navigation links when burger menu is active */
+    flex-direction: column;
+    background-color: white; /* Adjust background color as needed */
+    position: absolute;
+    top: 70px; /* Adjust top position */
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.1);
   }
-  
- 
-  .navbar-container nav ul li:last-child {
-    margin-right: 30px;
+
+  .navbar-container nav ul.active li {
+    padding: 10px 20px; /* Adjust padding as needed */
   }
-  
-  .navbar-container nav ul li a {
-    text-decoration: none;
-    color: black;
+
+  .burger-menu {
+    display: block; /* Display the burger menu */
+    cursor: pointer;
   }
-  
-  .navbar-container nav ul li a.activePage {
-    font-weight: bold;
+
+  .line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 45px;
+    transition: transform 0.4s ease;
   }
-  
- 
+
+  .line.active.line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .line.active.line2 {
+    opacity: 0;
+  }
+
+  .line.active.line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}

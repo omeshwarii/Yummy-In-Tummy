@@ -14,6 +14,7 @@ const menuSchema = mongoose.Schema({
       required: true,
       default: []
     },
+    mealtype: { type: String}
     
 });
 

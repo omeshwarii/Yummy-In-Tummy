@@ -1,51 +1,102 @@
-body {
-    background-color: beige;
-  }
-  
-  .top-container{
-    display: flex; /* Use Flexbox */
-    padding: 200px 0px 200px;
-  }
-  
+.description {
+  width: 50%;
+  font-size: 70px;
+  text-align: left;
+  padding: 100px 0px 120px 100px;
+  border-radius: 20px;
+  font-family: Jazz LET, fantasy;
+  font-style: bold;
+  color: rgb(88, 24, 24);
+}
 
+.about{
+  font-size: 25px;
+  background: rgb(174,238,223);
+  background: radial-gradient(circle, rgba(174,238,223,1) 0%, rgba(180,233,148,1) 100%);
+  padding: 90px  160px ; 
+
+}
+.detailsContainer {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  margin: 80px  25px; 
+}
+
+.detailsContent {
+  width: 30%; 
+  padding: 20px; 
+  box-sizing: border-box; 
+  text-align: center;
+}
+
+h2{
+font-size: 1.7rem;
+}
+.contentImg{
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+}
+
+
+.img-container {
+  display: flex;
+  width: 100%;
+  height: 620px;
+  overflow: hidden;
+}
+
+.img-container img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transition: transform 10s ease-in-out; 
+}
+
+.img-container img:first-child {
+  transform: translateX(0); /* Initially display the first image */
+}
+
+.img-container img:not(:first-child) {
+  transform: translateX(100%); /* Hide the other images off-screen to the right */
+}
+
+
+
+.footer-container {
+  display: flex; 
+  color: white;
+  padding: 50px 0px 50px;
+  font-size: 16px;
+  background-color: rgba(8, 73, 8, 0.76);;
+  font-weight: 500;
+  box-shadow: inset 0px 10px 10px -15px rgba(0, 0, 0, 0.8); 
   
+}
+
+.footer-container section {
+  font-weight: bold;
+  padding-bottom: 30px;
+  font-size: 17px;
+}
+
+.footer-container .contact {
+  width: 50%;
+  padding-left: 170px;
+  border-right: 2px solid gainsboro;
+}
+
+.footer-container .location {
+  width: 60%;
+  padding-left: 80px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
   .description {
-    width: 50%;
-    font-size: 50px;
-    text-align: left;
-    padding-left:80px;
-    padding-top: 60px;
-    font-family:Jazz LET, fantasy;
-    font-style: bold;
-    color: rgb(88, 24, 24);
+    font-size: 40px; /* Adjust font size for smaller screens */
+    padding: 80px 40px 160px 80px; /* Adjust padding for smaller screens */
   }
-  
-  .img {
-    padding-right: 3%;
-  }
-  
-  .footer-container {
-    display: flex; /* Use Flexbox */
-    padding: 50px 0px 50px;
-    font-size: 16px;
-    background-color: rgba(199, 199, 147, 0.831);
-    font-weight:500;
-    box-shadow: inset 0px 10px 10px -15px rgba(0, 0, 0, 0.8); /* Add inset box shadow for inside top shadow */
-
-  }
-  .footer-container section{
-    font-weight: bold;
-    padding-bottom:30px;
-    font-size: 17px;
-  }
-  .footer-container .contact {
-    width: 50%;
-    padding-left: 170px;
-    border-right: 2px solid rgba(227, 227, 187, 0.831); 
-  }
-  .footer-container .location {
-    width: 60%; 
-    padding-left: 80px;
-    
-  }
-  
+}

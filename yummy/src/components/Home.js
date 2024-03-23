@@ -31,7 +31,7 @@ function Home() {
     <div>
       <img src={home1} alt="Home" className="img-container" ref={imgContainerRef} />
       <section className="description">
-        Savor the flavors of homemade goodness.
+        SAVOR THE FLAVORS OF HOMEMADE GOODNESS.
       </section>
       <div className="about">
       Indulge in our farm-fresh dishes, where purity meets nutrition. Our ingredients are meticulously selected for their freshness and quality, ensuring every bite is a delightful experience. Experience the goodness of pure and clean food, free from harmful additives. Nourish your body with our menu's nutritional excellence, crafted to offer a perfect balance of flavors and nutrients. Join us for a culinary journey that celebrates the best of nature's bounty.

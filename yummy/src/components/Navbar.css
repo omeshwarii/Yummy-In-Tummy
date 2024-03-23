@@ -52,6 +52,9 @@ body {
 
 /* Media Query for Responsive Navbar */
 @media screen and (max-width: 500px) {
+  .navbar-container h1 a {
+    font-size: 20px ;
+  }
   .navbar-container {
     padding: 10px 15px; /* Adjust padding for smaller screens */
   }

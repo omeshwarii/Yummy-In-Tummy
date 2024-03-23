@@ -16,6 +16,7 @@ function Navbar() {
         <ul className={showMenu ? 'nav-menu active' : 'nav-menu'}>
           <li><Link to="/" onClick={toggleMenu}>About</Link></li>
           <li><Link to="/menu" onClick={toggleMenu}>Menu</Link></li>
+          <li><Link to="/catering" onClick={toggleMenu}>Catering</Link></li>
         </ul>
         <div className="burger-menu" onClick={toggleMenu}>
           <div className={showMenu ? 'line line1 active' : 'line line1'}></div>

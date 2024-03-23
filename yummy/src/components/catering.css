@@ -12,6 +12,7 @@
     background-color: rgba(220, 220, 220, 0.724);
     border-radius: 1rem;
     padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 .bgCatering {
@@ -61,6 +62,7 @@
     justify-content: center;
     width: 90vw;
     max-width: 60rem;
+    box-sizing: border-box;
 }
 
 .name,.email,.msg{
@@ -85,4 +87,13 @@
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    #contact {
+        padding: 0 0.5rem; /* Adjust padding for smaller screens */
+    }
+
+    .contactForm {
+        padding: 0 0.5rem; /* Adjust padding for smaller screens */
+    }
+}
 

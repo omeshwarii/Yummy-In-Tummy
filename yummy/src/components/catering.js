@@ -28,7 +28,7 @@ const Catering = () => {
     <section id="contact">
         <img src={bgCatering} alt="" className="bgCatering" />
         <div className="contactMe">
-          <h1 className="contactPageTitle">Contact Me</h1>
+          <h1 className="contactPageTitle">Contact Us</h1>
           <span className="contactDesc">Schedule your catering today!</span>
           <form className="contactForm" ref={form} onSubmit={sendEmail}>
             <input type="text" className="name" placeholder='name' name="your_name" />

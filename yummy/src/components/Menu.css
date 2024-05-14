@@ -43,14 +43,15 @@
   .MenuCard {
     width: 400px;
     box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2);
-    margin: 15px;
-    height: 400px;
+    margin: 20px;
+    height: 370px;
+    border-radius: 10px;
     position: relative;
   }
   
   .MenuCard:hover {
     transform: scale(1.02); /* Scale the menu card to 105% on hover */
-    background-color: rgba(199, 199, 147, 0.831); /* Change the background color on hover */
+    background-color: #e6ffe6; /* Change the background color on hover */
   }
   
   .MenuImg {
@@ -92,3 +93,11 @@
     }
     
   }
+
+  @media screen and (max-width:500px ) {
+    .MenuCard {
+      width: 350px;
+    }
+    
+  }
+  

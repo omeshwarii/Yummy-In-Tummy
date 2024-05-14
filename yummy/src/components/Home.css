@@ -99,7 +99,7 @@ font-size: 1.7rem;
   
   .description {
     font-size: 40px; /* Adjust font size for smaller screens */
-    padding: 80px 40px 100px 80px; /* Adjust padding for smaller screens */
+    padding: 50px 40px 50px 80px; /* Adjust padding for smaller screens */
   }
     .about{
       font-size: 15px;
@@ -134,4 +134,8 @@ font-size: 1.7rem;
     padding-top: 10px; /* Adjust top padding for location on smaller screens */
   }
 
+  .img-container {
+    min-height: 370px;
   }
+
+}
